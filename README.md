@@ -45,6 +45,15 @@ Start Express server :
 ---
 ## Step 3 - Run the todolist app
 
+Install Bower with npm : 
+
+    npm install -g bower
+
+Move to `todolist_app` folder and install dependencies with Bower :
+
+    cd todolist_app/
+    bower install    
+
 Open `todolist_app/index.html` in your favorite browser.
 
 
