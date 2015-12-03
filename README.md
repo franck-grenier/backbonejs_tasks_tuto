@@ -1,6 +1,6 @@
 # Backbone.js todolist app
 
-A learning exercise on Backbone.js to create a simple task manager running on an ExpressJS server and storing data in a MongoDB database.
+A learning exercise on Backbone.js to create a simple task manager running on an ExpressJS server API and storing data into a MongoDB database.
 
 
 ---
@@ -19,6 +19,8 @@ All done! MongoDB is ready to store your tasks.
 
 ---
 ## Step 2 - Start Express server
+
+The ExpressJS server provides a REST API to create, retrieve, update and delete tasks through MongoDB.
 
 You will need NodeJS and npm : 
 
