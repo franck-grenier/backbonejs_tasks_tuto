@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO List</title>
+         <meta charset="UTF-8">
+         <script data-main="js/main" src="bower_components/requirejs/require.js"></script>
+    </head>
+    <body>
+        <section id="todolist_and_edit">
+            <h1>Mes tâches</h1>
+            <button id="btn_add_task">Ajouter une tâche</button>
+
+            <script type="text/template" id="todolist_and_edit_tpl">
+                <h1>Mes tâches</h1>
+                <button id="btn_add_task">Ajouter une tâche</button>
+                <ul class="todo_list">
+                <% _.each(todos, function(todo){ %>
+                    <li class="todo" data-id="<%= todo._id %>">
+                        <% if(todo.editing) %> 
+                            <input id="title" type="text" value="<%= todo.title %>" />
+                        <% else %> 
+                            <h2><%= todo.title %></h2>
+
+                        <% if(todo.editing) %>
+                            <br />
+                            <textarea id="content"><%= todo.content %></textarea>
+                            <br />
+                        <% else %> 
+                            <p><%= todo.content %></p> 
+                        
+                        <% if(todo.editing) %> 
+                            <button id="btn_save_task">save</button> 
+                        <% else %> 
+                            <button id="btn_edit_task">edit</button> 
+                        
+                        <button id="btn_remove_task">x</button> 
+                    </li>
+                <% }) %>
+                </ul>
+            </script>
+
+        </section>
+
+        <section id="last_todos">
+
+            <script type="text/template" id="last_todos_tpl">
+                <h2>Mes dernières tâches</h2>
+                <ul class="last_todo_list">
+                    <% _.each(todos, function(todo){ %>
+                        <li><h3><%= todo.title %></h3></li>
+                    <% }) %>
+                </ul>
+            </script>
+
+        </section>
+    </body>
+</html> 
