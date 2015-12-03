@@ -57,5 +57,4 @@ Move to `todolist_app` folder and install dependencies with Bower :
 Open `todolist_app/index.html` in your favorite browser.
 
 
-
-
+Thanks to https://github.com/RSamaium
